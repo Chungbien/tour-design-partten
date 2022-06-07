@@ -1,3 +1,5 @@
+package FactoryMethod
+
 const (
     BRAND_NIKE   = "nike"
     BRAND_ADIDAS = "adidas"
