@@ -1,14 +1,4 @@
-package AbstractFactory
-
-const (
-    BRAND_NIKE   = "nike"
-    BRAND_ADIDAS = "adidas"
-)
-
-type IProduct interface {
-    Go(logo string, size int)
-    Show()
-}
+package FactoryMethod
 
 type IFactory interface {
     Create(brand string, l string, s int, o string) IProduct
@@ -19,7 +9,7 @@ type Factory struct{}
 func (f *Factory) Create(brand string, l string, s int, o string) IProduct {
     switch brand {
     case BRAND_NIKE:
-        return &Nike{ // !!!NOTE
+        return &Nike{
             Logo:        l,
             Size:        s,
             Description: o,
